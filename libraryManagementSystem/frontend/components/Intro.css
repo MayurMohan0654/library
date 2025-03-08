@@ -1,0 +1,82 @@
+.introMain{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.introCard{
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 30rem;
+}
+.introCard .part1{
+    width: 100%;
+    height: 56%;
+    position: relative;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: slideshow 8s infinite;
+    opacity: 0;
+}
+
+.slide1 {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/044/280/984/small_2x/stack-of-books-on-a-brown-background-concept-for-world-book-day-photo.jpg');
+    animation-delay: 0s;
+}
+
+.slide2 {
+    background-image: url('https://www.challies.com/media/2022/08/AdobeStock_243388799-1.jpeg');
+    animation-delay: 2s;
+}
+
+.slide3 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnwv7MrC6BKdE5zldg5oYpyKdWtZ_DIF1g5w&s');
+    animation-delay: 4s;
+}
+
+.slide4 {
+    background-image: url('https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg');
+    animation-delay: 6s;
+}
+
+@keyframes slideshow {
+    0%, 20% {
+        opacity: 1;
+    }
+    25%, 95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.introCard .part2{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introText p{
+    padding: 0.1rem;
+}

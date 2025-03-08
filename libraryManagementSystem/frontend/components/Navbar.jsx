@@ -1,18 +1,23 @@
-import React from 'react'
+import React from "react";
+import "./nav.css";
 
 function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto flex justify-between">
-        <div className="font-bold text-xl">Library App</div>
-        <div className="space-x-4">
-          <a href="/" className="hover:text-gray-300">Home</a>
-          <a href="/books" className="hover:text-gray-300">Books</a>
-          <a href="/about" className="hover:text-gray-300">About</a>
+    <>
+      <div className="nav">
+        <div className="title">Library Management App</div>
+        <div className="loginsign">
+          <a href="#">Login</a>
+          <p>/</p>
+          <a href="#">Sign up</a>
+        </div>
+        <div className="extra">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
         </div>
       </div>
-    </nav>
-  )
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;

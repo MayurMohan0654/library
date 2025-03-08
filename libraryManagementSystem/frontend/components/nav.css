@@ -1,0 +1,46 @@
+.nav{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgb(36, 205, 205), rgb(110, 213, 229));
+    width: auto;
+    height: auto;
+}
+
+.title{
+    display: flex;
+    margin-left: 6rem;
+    padding: 0 1rem 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.loginsign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+}
+.loginsign a{
+    margin: 0 1rem 0;
+}
+.loginsign a:hover{
+    color: aqua;
+}
+
+.extra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6rem;
+}
+.extra a{
+    padding: 0 1rem 0;
+}
+
+.extra a:hover{
+    color: aqua;
+}
