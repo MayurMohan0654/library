@@ -1,10 +1,9 @@
 .introMain{
     display: flex;
     margin-top: 2rem;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
 
 }
 .introCard{
@@ -13,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 30rem;
-    width: 30rem;
+    width: 25%;
 }
 .introCard .part1{
     width: 100%;
@@ -23,6 +22,7 @@
 }
 .slide {
     position: absolute;
+    border-radius: 1rem 1rem 0 0;
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -37,26 +37,18 @@
     animation-delay: 0s;
 }
 
-.slide2 {
-    background-image: url('https://www.challies.com/media/2022/08/AdobeStock_243388799-1.jpeg');
-    animation-delay: 2s;
-}
 
 .slide3 {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnwv7MrC6BKdE5zldg5oYpyKdWtZ_DIF1g5w&s');
     animation-delay: 4s;
 }
 
-.slide4 {
-    background-image: url('https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg');
-    animation-delay: 6s;
-}
 
 @keyframes slideshow {
-    0%, 20% {
+    0%, 50% {
         opacity: 1;
     }
-    25%, 95% {
+    55%, 95% {
         opacity: 0;
     }
     100% {
@@ -70,9 +62,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, rgb(36, 205, 205), rgb(110, 213, 229));
+    border-radius: 0 0 1rem 1rem;
 }
 .introText{
     display: flex;
+    margin:0 10rem 0 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
