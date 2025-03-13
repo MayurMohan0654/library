@@ -3,18 +3,40 @@ import Navbar from "../../components/Navbar";
 import { NavLink } from "react-router";
 
 import "./login.css";
-import "../scripts/regLog.js";
 
 function Login() {
+  async function login() {
+    const username = document.getElementById('uname').value;
+    const password = document.getElementById('upass').value;
+
+    const result = await fetch(`http://localhost:5000/fetch/${username}`);  
+    const data = await result.json();
+    // console.log(data);
+
+    if(data.length == 0){
+      alert("user not exists");
+    }else{
+      const pass = data[0].password;
+  
+      if(pass == password){
+        alert("Login Sccessfully")
+      }else{
+        alert("password incorect")
+      }   
+    }
+
+
+  }
+
   return (
     <>
       <Navbar />
       <div className="login">
         <div className="loginMain">
           <h1 className="text-2xl font-bold mb-3">LOGIN</h1>
-          <input type="text" placeholder="Username" className="loginInput" />
-          <input type="text" placeholder="Password" className="loginInput" />
-          <button className="loginButton">Login</button>
+          <input type="text" placeholder="Username" id="uname" className="loginInput" />
+          <input type="text" placeholder="Password" id="upass" className="loginInput" />
+          <button className="loginButton" onClick={login}>Login</button>
           <div className="orLine">
             <div className="line"></div>
             <h1>OR</h1>
